@@ -1,0 +1,27 @@
+{
+  "name": "Sri Lakshmi Kubera Properties - Sandalwood Farmlands",
+  "short_name": "SLK Farms",
+  "description": "Premium Sandalwood Farmland Investments in Krishnapuram, Udayagiri, Nellore, Andhra Pradesh.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06100A",
+  "theme_color": "#06100A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
