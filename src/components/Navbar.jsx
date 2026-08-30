@@ -23,14 +23,26 @@ export default function Navbar({ theme, toggleTheme, onBookSlot }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Close mobile drawer on route change
+  // Close mobile drawer on route change & handle body scroll lock
   useEffect(() => {
     setOpen(false)
   }, [location.pathname])
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [open])
+
   const navbarClasses = [
     'navbar',
     scrolled ? 'is-scrolled' : '',
+    open ? 'is-menu-open' : '',
   ]
     .filter(Boolean)
     .join(' ')
