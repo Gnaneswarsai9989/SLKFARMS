@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { business, footer } from '../data/content.js'
+import { Icon } from './Icons.jsx'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -15,9 +16,40 @@ export default function Footer() {
             </div>
             <p>{footer.about}</p>
             <div className="footer-social">
-              {['f', 'x', 'ig', 'yt'].map((s) => (
-                <a href="#" key={s} aria-label={s}>{s}</a>
-              ))}
+              <a
+                href={business.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram @slkfarms2026"
+                className="social-btn social-instagram"
+              >
+                <Icon.instagram style={{ width: 18, height: 18 }} />
+              </a>
+              <a
+                href={business.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook @slkfarms2026"
+                className="social-btn social-facebook"
+              >
+                <Icon.facebook style={{ width: 18, height: 18 }} />
+              </a>
+              <a
+                href={`https://wa.me/${business.whatsappNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp Support"
+                className="social-btn social-whatsapp"
+              >
+                <Icon.whatsapp style={{ width: 19, height: 19 }} />
+              </a>
+              <a
+                href={`mailto:${business.email}`}
+                aria-label="Email Support"
+                className="social-btn social-mail"
+              >
+                <Icon.mail style={{ width: 18, height: 18 }} />
+              </a>
             </div>
           </div>
 
@@ -38,6 +70,7 @@ export default function Footer() {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/services">Services</Link></li>
+              <li><Link to="/upcoming-projects">Upcoming Projects</Link></li>
               <li><Link to="/testimonials">Testimonials & FAQs</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
             </ul>

@@ -7,10 +7,10 @@ import Footer from './components/Footer.jsx'
 import WhatsAppButton from './components/WhatsAppButton.jsx'
 import BookSlotModal from './components/BookSlotModal.jsx'
 
-// Pages
 import HomePage from './pages/HomePage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
 import ServicesPage from './pages/ServicesPage.jsx'
+import UpcomingProjectsPage from './pages/UpcomingProjectsPage.jsx'
 import TestimonialsPage from './pages/TestimonialsPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 
@@ -29,6 +29,7 @@ export default function App() {
         <Route path="/" element={<HomePage onBookSlot={handleBookSlot} />} />
         <Route path="/about" element={<AboutPage onBookSlot={handleBookSlot} />} />
         <Route path="/services" element={<ServicesPage onBookSlot={handleBookSlot} />} />
+        <Route path="/upcoming-projects" element={<UpcomingProjectsPage onBookSlot={handleBookSlot} />} />
         <Route path="/testimonials" element={<TestimonialsPage onBookSlot={handleBookSlot} />} />
         <Route path="/contact" element={<ContactPage onBookSlot={handleBookSlot} />} />
         {/* Fallback route */}

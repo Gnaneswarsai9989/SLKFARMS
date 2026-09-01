@@ -39,6 +39,20 @@ export default function Contact() {
               <span className="info-icon"><Icon.phone style={{ width: 20, height: 20 }} /></span>
               <div><strong>Call / WhatsApp</strong><br /><a href={`tel:${business.phoneDisplay.replace(/\s/g, '')}`}>{business.phoneDisplay}</a></div>
             </div>
+            <div className="info-row">
+              <span className="info-icon"><Icon.globe style={{ width: 20, height: 20 }} /></span>
+              <div>
+                <strong>Follow Us</strong>
+                <div style={{ display: 'flex', gap: 10, marginTop: 6, flexWrap: 'wrap' }}>
+                  <a href={business.instagram} target="_blank" rel="noopener noreferrer" className="contact-social-pill">
+                    <Icon.instagram style={{ width: 14, height: 14 }} /> Instagram
+                  </a>
+                  <a href={business.facebook} target="_blank" rel="noopener noreferrer" className="contact-social-pill">
+                    <Icon.facebook style={{ width: 14, height: 14 }} /> Facebook
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </Reveal>
 

@@ -73,6 +73,31 @@ export default function ContactPage({ onBookSlot }) {
                   <a href={`mailto:${business.email}`}>{business.email}</a>
                 </div>
               </div>
+
+              <div className="info-row">
+                <span className="info-icon"><Icon.globe style={{ width: 20, height: 20 }} /></span>
+                <div>
+                  <strong>Official Social Channels</strong>
+                  <div style={{ display: 'flex', gap: 10, marginTop: 8, flexWrap: 'wrap' }}>
+                    <a
+                      href={business.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="contact-social-pill"
+                    >
+                      <Icon.instagram style={{ width: 15, height: 15 }} /> Instagram (@slkfarms2026)
+                    </a>
+                    <a
+                      href={business.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="contact-social-pill"
+                    >
+                      <Icon.facebook style={{ width: 15, height: 15 }} /> Facebook (Slk Farms)
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="visit-card" style={{ marginTop: 32 }}>
