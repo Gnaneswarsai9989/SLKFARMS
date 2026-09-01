@@ -565,6 +565,25 @@ h1, h2, h3, h4 {
 
   .nav-toggle { display: flex !important; }
   .topbar-links { display: none !important; }
+
+  /* Generous top spacing on mobile so navbar and "Sri Lakshmi Kubera Farms" badge never collide */
+  .hero-fullscreen {
+    min-height: 100dvh;
+    min-height: 100vh;
+    height: auto;
+  }
+  .hero-fs-content {
+    padding-top: clamp(130px, 17vh, 160px) !important;
+    padding-bottom: clamp(36px, 5vh, 56px) !important;
+    justify-content: flex-start !important;
+  }
+  .hero-fullscreen .hero-eyebrow {
+    margin-top: 12px !important;
+    margin-bottom: 18px !important;
+  }
+  .page-header {
+    padding-top: clamp(140px, 18vh, 175px) !important;
+  }
 }
 
 /* ───────────────────────── Hero ───────────────────────── */
