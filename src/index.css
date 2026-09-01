@@ -290,7 +290,7 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
+  padding: 6px 0;
 }
 .brand {
   display: flex;
@@ -299,17 +299,17 @@ h1, h2, h3, h4 {
   text-decoration: none;
 }
 .brand-logo {
-  height: clamp(48px, 4.8vw, 60px);
+  height: clamp(80px, 7vw, 102px);
   width: auto;
-  max-width: 190px;
+  max-width: 320px;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 3px 12px rgba(227, 200, 136, 0.3)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 4px 14px rgba(227, 200, 136, 0.4)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.65));
   transition: transform 0.35s var(--ease), filter 0.35s var(--ease);
 }
 .brand:hover .brand-logo {
-  transform: scale(1.04);
-  filter: drop-shadow(0 5px 16px rgba(227, 200, 136, 0.45)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7));
+  transform: scale(1.05);
+  filter: drop-shadow(0 6px 20px rgba(227, 200, 136, 0.55)) drop-shadow(0 2px 10px rgba(0, 0, 0, 0.75));
 }
 
 .brand-text {
@@ -479,24 +479,24 @@ h1, h2, h3, h4 {
   }
 
   .navbar .container {
-    padding: 8px 0 !important;
+    padding: 4px 0 !important;
   }
 
   /* Increase logo size in mobile version */
   .brand-logo {
-    height: clamp(60px, 15vw, 74px) !important;
-    max-width: 240px !important;
+    height: clamp(86px, 22vw, 108px) !important;
+    max-width: 320px !important;
   }
 
   .nav-links {
     position: fixed !important;
-    top: 80px !important;
+    top: 102px !important;
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
     width: 100% !important;
-    height: calc(100dvh - 80px) !important;
-    height: calc(100vh - 80px) !important;
+    height: calc(100dvh - 102px) !important;
+    height: calc(100vh - 102px) !important;
     background: #06100a !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;

@@ -1,12 +1,9 @@
-import { useState } from 'react'
 import PageHeader from '../components/PageHeader.jsx'
 import Reveal from '../components/Reveal.jsx'
 import { Icon } from '../components/Icons.jsx'
 import { upcomingProjectsData, quotation } from '../data/content.js'
 
 export default function UpcomingProjectsPage({ onBookSlot }) {
-  const [selectedImage, setSelectedImage] = useState(null)
-
   return (
     <div className="inner-page upcoming-projects-page">
       <PageHeader
@@ -138,68 +135,6 @@ export default function UpcomingProjectsPage({ onBookSlot }) {
         </div>
       </section>
 
-      {/* ── Official Poster Brochure Spotlight ── */}
-      <section className="section">
-        <div className="container">
-          <Reveal className="upcoming-poster-spotlight-card">
-            <div className="poster-spotlight-img-wrap" onClick={() => setSelectedImage(upcomingProjectsData.posterImage)}>
-              <img
-                src={upcomingProjectsData.posterImage}
-                alt="Upcoming Projects Official Brochure"
-                className="poster-spotlight-img"
-              />
-              <div className="poster-click-hint">
-                <Icon.play style={{ width: 14, height: 14 }} /> Click to expand brochure
-              </div>
-            </div>
-
-            <div className="poster-spotlight-content">
-              <span className="eyebrow" style={{ marginBottom: 12 }}>
-                Official Regional Announcement
-              </span>
-              <h2>{upcomingProjectsData.heroBannerSlogan}</h2>
-              <h4 style={{ color: '#FFE6A3', fontWeight: 700, marginBottom: 16 }}>
-                {upcomingProjectsData.heroBannerSub}
-              </h4>
-              <p style={{ lineHeight: 1.8, marginBottom: 24, color: 'var(--text-muted)' }}>
-                The strategic development of Reliance Bio Energy (500 Acres), Vijay Green Energies (500 Acres), Anantha Group (300 Acres), Premier Explosives (300 Acres), Anadrone (250 Acres), INSINE Park (225 Acres), Aditya Group (200 Acres), and RR Group (40 Acres) marks a historic inflection point for the Udayagiri & Duttalur corridor.
-              </p>
-
-              <div className="poster-key-takeaways">
-                <div className="takeaway-item">
-                  <span className="takeaway-check"><Icon.check style={{ width: 14, height: 14 }} /></span>
-                  <div>
-                    <strong>Proximity Advantage:</strong>
-                    <span>Sri Lakshmi Kubera Farmlands is ideally situated in the core growth triangle.</span>
-                  </div>
-                </div>
-                <div className="takeaway-item">
-                  <span className="takeaway-check"><Icon.check style={{ width: 14, height: 14 }} /></span>
-                  <div>
-                    <strong>Dual ROI Driver:</strong>
-                    <span>White Sandalwood timber yields + Exponential industrial land price appreciation.</span>
-                  </div>
-                </div>
-                <div className="takeaway-item">
-                  <span className="takeaway-check"><Icon.check style={{ width: 14, height: 14 }} /></span>
-                  <div>
-                    <strong>Clear 100% Registration:</strong>
-                    <span>Legally verified individual plot ownership with zero development delays.</span>
-                  </div>
-                </div>
-              </div>
-
-              <div style={{ marginTop: 32 }}>
-                <button className="btn btn-primary" onClick={onBookSlot}>
-                  <Icon.pin style={{ width: 16, height: 16 }} />
-                  Book Free Farmland Site Visit &rarr;
-                </button>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       {/* ── Mid-CTA Banner ── */}
       <section className="section section-mid-cta">
         <div className="container">
@@ -236,18 +171,6 @@ export default function UpcomingProjectsPage({ onBookSlot }) {
           </Reveal>
         </div>
       </section>
-
-      {/* Lightbox modal for brochure poster */}
-      {selectedImage && (
-        <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
-          <div className="modal-card" style={{ maxWidth: 800, padding: 16 }} onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setSelectedImage(null)} aria-label="Close">
-              &times;
-            </button>
-            <img src={selectedImage} alt="Enlarged Brochure" style={{ width: '100%', height: 'auto', borderRadius: 12 }} />
-          </div>
-        </div>
-      )}
     </div>
   )
 }

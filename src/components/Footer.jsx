@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="footer-brand">
             <div className="brand" style={{ marginBottom: 16 }}>
               <Link to="/" aria-label="SLK - Sree Lakshmi Kubera Properties">
-                <img src="/images/logo.png" alt="SLK - Sree Lakshmi Kubera Properties" className="brand-logo" style={{ height: 58 }} />
+                <img src="/images/logo.png" alt="SLK - Sree Lakshmi Kubera Properties" className="brand-logo" style={{ height: 'clamp(76px, 7vw, 96px)', maxWidth: 280 }} />
               </Link>
             </div>
             <p>{footer.about}</p>
